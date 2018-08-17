@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="PILAS" Database="" Version="10.0.0">
+  <Project Name="PILAS01" Path="PILAS01/PILAS01.project" Active="No"/>
+  <Project Name="COLAS" Path="COLAS/COLAS.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="PILAS" ConfigName="Debug"/>
+      <Project Name="PILAS01" ConfigName="Debug"/>
+      <Project Name="COLAS" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="PILAS" ConfigName="Debug"/>
+      <Project Name="PILAS01" ConfigName="Release"/>
+      <Project Name="COLAS" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+Ejemplos de formularios
+</title>
+<style type="text/css">
+ p { font-size: 12pt; font-weight: bold; background-color: #ffefcf; }
+</style>
+</head>
+<center>
+<h1>Ejemplos de formularios</h1>
+</center>
+<form action="http://localhost:2500" method="post"
+enctype="multipart/form-data">
+<p>
+Nombre: <input type="text" name="nombre"><br><br>
+Apellidos: <input type="text" name="apellidos"><br><br>
+Correo electrónico: <input type="text" name="email"><br><br>
+Contraseña: <input type="password" name="passwd"><br><br>
+<input type="radio" name="sexo" value="V"> Hombre<br><br>
+<input type="radio" name="sexo" value="M"> Mujer<br><br>
+<input type="checkbox" name="verde"> Verde<br><br>
+<input type="checkbox" name="rojo"> Rojo<br><br>
+<input type="checkbox" name="azul"> Azul<br><br>
+<input type="checkbox" name="amarillo"> Amarillo<br><br>
+<textarea name="eltexto" rows="5" cols="80">
+Escribe algo aquí, si quieres.
+</textarea><br><br>
+Elijo algunas frutas:
+<select multiple size="4" name="seleccion-frutas">
+<option selected value="platano">Plátano</option>
+<option selected value="naranja">Naranja</option>
+<option value="pera">Pera</option>
+<option value="limon">Limón</option>
+<option value="fresa">Fresa</option>
+<option value="manzana">Manzana</option>
+<option value="ciruela">Ciruela</option>
+</select><br><br>
+Mando este fichero: <input type="file" name="fichero"><br><br>
+<input type="submit" value="Dar de alta">
+<input type="reset">
+</p>
+</form>
+</html>

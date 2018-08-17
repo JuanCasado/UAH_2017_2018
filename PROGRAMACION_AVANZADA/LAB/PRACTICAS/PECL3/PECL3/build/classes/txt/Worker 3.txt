@@ -1,0 +1,7 @@
+--------------------------------------------------------------
+ - 142326 -Esperando por un coche
+ - 152213 -INTERRUPTION WHILE WAITING FOR FREE PUM
+ - 152213 -WORKER FORCED TERMINATION
+ - 152214 -CARED_PUMP WAS EMPTY
+ - 152214 -Ha terminado
+--------------------------------------------------------------

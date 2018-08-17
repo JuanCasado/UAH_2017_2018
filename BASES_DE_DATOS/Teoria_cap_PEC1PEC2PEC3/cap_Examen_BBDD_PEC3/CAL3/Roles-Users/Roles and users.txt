@@ -1,0 +1,32 @@
+/* Rol de los Administradores */
+
+CREATE ROLE "administrator" SUPERUSER INHERIT CREATEDB CREATEROLE;
+GRANT ALL ON associated,bill,customer,customer_online,customer_physical,have,offer,packs,product,refund,reviews,services,shopping,is_offered TO "administrator";
+
+CREATE USER "admin" WITH PASSWORD 'admin' CREATEROLE CREATEUSER INHERIT;
+GRANT "administrator" TO "admin";
+
+/* Rol de los Gestores*/
+
+CREATE ROLE "manager" NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE;
+GRANT SELECT, INSERT, UPDATE, DELETE ON associated,bill,customer,customer_online,customer_physical,have,offer,packs,product,refund,reviews,services,shopping,is_offered TO "manager";
+
+CREATE USER "manger" WITH PASSWORD 'manger';
+GRANT "manager" TO "manger";
+
+/* Rol de Comerciales*/
+
+
+CREATE ROLE "cashier" NOSUPERUSER NOINHERIT NOCREATEDB NOCREATEROLE;
+GRANT SELECT ON associated,bill,customer,customer_online,customer_physical,have,offer,packs,product,refund,reviews,services,shopping,is_offered TO "cashier";
+
+CREATE USER "cash" WITH PASSWORD 'cash';
+GRANT "cashier" TO "cash";
+
+
+set role "administrator"
+
+REVOKE CREATE ON SCHEMA public FROM "manager"
+REVOKE CREATE ON TABLESPACE pg_default FROM "manager"
+REVOKE CREATE ON SCHEMA public FROM "cashier"
+REVOKE CREATE ON TABLESPACE pg_default FROM "cashier"

@@ -1,0 +1,183 @@
+1-Las restricciones de integridad son un medio para lograr:
+
+a.que las consultas hechas en la base de datos por los usuarios no provoquen una perdida de la — de los datos
+b.que las modificaciones hechas a la base de datos por los usuarios no provoquen una perdida de la cont— de los datos
+c.ninguna de las anteriores
+
+Respuesta: B
+
+2-La instrucción en SQL:create domain Euros as numeric(12,2)
+
+a.es correcta para crear nuevos dominios
+b.no existe 
+c.ninguna de las anteriores
+
+Respuesta: A
+
+3-Implicitamente, una clave:
+
+a.puede ser vista como un tipo de restricción de integridad
+b.puede ser vista como un disparador
+c.ninguna de las anteriores
+
+Respuesta: a o c?
+Puede ser de integridad porque no es posible jugar con las claves para no estropear integridad.
+
+4-Una restricción sobre los dominios
+
+a.No existe ese tipo de restricción
+b.Hace que los valores de un atributo de la base de datos estén comprendidos entre una serie de valores (definidos) previamente.
+c.Ninguna de las anteriores
+
+Respuesta: B
+
+5- Las “tuplas colgantes”
+
+a.Nunca son admisibles en un diseño de BDD
+b.Pueden ser admisibles en algunos casos
+c.No existe ese concepto
+
+Respuesta: B
+
+6-En la secuencia de instrucciones:
+
+	primary key (numero_cuenta)
+	fereign key (nombre_sucursal) references sucursal,
+	check (saldo>=0)))
+la clausula foreign key:
+
+a.asegura que no existe ninguna cuenta que especifique el nombre de una sucursal inexistente
+b.asegura que nombre sucursal no sea un atributo vacío
+c.ninguna de las anteriores
+
+Respuesta: A
+
+7-En la secuencia de instrucciones, la instrucción “on delete cascade”:
+		foreign key(nombre_sucursal) references sucursal 
+							on delete cascade)
+
+a.es incorrecta porque no existe esa instrucción en SQL
+b.hace que si el borrado de una tupla viola la restricción referencial el sistema N-
+c.ninguna de las anteriores
+
+Respuesta: b?
+La instrucción existe pero la b en duda.
+
+8-En SQL, una vez creada una tabla
+
+a.no es posible añadir restricciones de integridad
+b.es perfectamente posible añadirlas mediante la instrucción alter table
+c.ninguna de las anteriores
+
+Respuesta: A
+
+9-integridad referencial:
+
+a.debe mantenerse en todo momento en una BDD
+b.puede violarse temporalmente, reestableciendola posteriormente
+c.ninguna de las anteriores
+
+Respuesta: a
+Podría ser la b si se refiriera a una violación instantánea para una actualización?
+
+10- - “disparadores”
+
+a.deben dispararse en todo momento, al igual que los -
+b.sirven para tareas de mantenimiento dadas unas condiciones
+c. ninguna de las anteriores
+
+Respuesta: C
+Podría ser B dependiendo a que se refiera con “tareas de mantenimiento”
+
+11- - asertos
+
+a.se verifican solo en su creación
+b.aceleran el funcionamiento de una BDD
+c.ninguna de las anteriores
+
+Respuesta: A
+
+
+12-En? SQL
+a.es posible definir privilegios de asignar privilegios
+b.es posible hacerlo solo si eres el administrador
+c.ninguna de las anteriores
+
+Respuesta: B
+Es muy ambigua, mejor preguntar: un usuario que tiene concedido autorizaciones puede transmitir esas autorizaciones a otros.
+
+13- - relativo a la seguridad y autenticación en BBDD
+
+a.la primera es siempre mas importante
+b.son conceptos idénticos
+c.ninguna de las anteriores
+
+Respuesta: C
+Preguntar por su ambigüedad: Autenticación es un protocolo de autorización por lo tanto de seguridad
+
+14-suponga que el conjunto de atributos K es una superclave de la relación con atributos R, entonces siempre se cumple que
+
+a. K->R
+b. R->K
+c. ambas se cumplen
+
+Respuesta: K->R (a)
+
+15- - esquema de una BBDD esta en tercera forma normal:
+
+a.si esta en la FNBC
+b.Solo si esta en la FNBC
+c.ninguna de las dos anteriores
+
+Respuesta: a
+Nota: Obsérvese que si un esquema satisface FNBC también satisface 3FN, pero no al revés.
+
+16-Para Esquema-prestatario = (nombre-cliente, numero-préstamo) solo hay dependencias triviales, entonces -:
+
+a.dicho esquema esta en FNBC (Falso)
+b.no esta en FNBC porque número-préstamo no es superclave (Falso)
+c.ninguna de las anteriores
+
+Respuesta: C
+
+17-CIERRE de un conjunto de dependencias funcionales F+ se define como:
+
+a.El conjunto de todas las dependencias funcionales implicadas lógicamente por F
+b.El conjunto de todos los atributos determinados funcionalmente
+c.Ninguna de las anteriores
+
+Respuesta: A
+Algo parecido pone en los apuntes pero ni idea.
+
+18-En la siguiente relación se verifica:
+
+A	B	C	D
+a1	b1	c1	d1
+a1	b2	c1	d2
+a2	b2	c2	d2
+a2	b3	c2	d2
+a3	b3	c2	d4
+
+a. A->C
+b. C->A
+c. Ninguna de las anteriores
+
+Respuesta: A
+Viene uno casi igual en los apuntes y pone eso pero ni idea.
+
+19-Una de las justificaciones del empleo de la 3FN frente a la FNBC es que:
+
+a.la FNBC no necesariamente conserva las dependencias funcionales
+b.a diferencia de las FNBC la 3FN permite la descomposición sin pérdida
+c.ninguna de las anteriores
+
+Respuesta: A
+En los casos en que la descomposición en FNBC no conserva las dependencias se pueden hacer 3FN
+
+20-La 4FN se basa:
+
+a.en el empleo de dependencias multivaloradas
+b.en el empleo de dominios atómicos
+c.ninguna de las anteriores
+
+Respuesta: A

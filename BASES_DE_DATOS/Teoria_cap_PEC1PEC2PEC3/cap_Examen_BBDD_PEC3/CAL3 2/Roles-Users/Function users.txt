@@ -1,0 +1,61 @@
+/* Al usuario ADMINISTRADOR le permitirá hacer todas estas operaciones de inserción, actualización, consulta y borrado. Ademas podra crear o eliminar sobre la BBDD*/
+
+SET ROLE "administrator"
+
+
+INSERT INTO product VALUES (181, 'photography', 'Camara reflex' ,'Canon EOS 1200D',349, 'Canon',8);
+
+UPDATE product SET Stock = 7 WHERE product.Stock = 8;
+
+SELECT * FROM product WHERE Stock = 5;
+
+DELETE FROM product WHERE Stock = 7;
+
+ALTER TABLE product ADD COLUMN Example text
+
+ALTER TABLE product DROP COLUMN Example 
+
+CREATE TABLE Example (example1 text)
+
+DROP TABLE Example 
+
+select * from product;
+
+/* Al usuario GESTOR le permitirá hacer todas estas operaciones de inserción, actualización, consulta y borrado, pero no crear nada nuevo en la BBDD*/
+
+SET ROLE "manager"
+
+
+INSERT INTO product VALUES (150, 'kitchen', 'Coffee capsules' ,'coffee nespressoX470',519, 'Nespresso',13);
+
+UPDATE product SET Stock = 11 WHERE product.Stock = 13;
+
+SELECT * FROM product WHERE Stock = 1;
+
+DELETE FROM product WHERE Stock = 11;
+
+ALTER TABLE product ADD COLUMN Example text
+
+ALTER TABLE product DROP COLUMN Example 
+
+CREATE TABLE Example (example1 text)
+
+DROP TABLE Example 
+
+select * from product;
+
+
+/* Al usuario COMERCIAL solo podrá realizar operaciones de consulta con las tablas no podrá realizar ninguna de las anteriores*/
+
+SET ROLE "cashier"
+
+
+INSERT INTO product VALUES (281, 'photography', 'Camara reflex' ,'Canon EOS 1200D',249, 'Canon',58);
+
+UPDATE product SET Stock = 10 WHERE product.Stock = 58;
+
+DELETE FROM product WHERE Stock = 10;
+
+/*Aqui vemos como solo puede consultar*/
+
+Select * from product

@@ -1,0 +1,5 @@
+set PATH="c:\masm\bin";%PATH%
+
+
+masm /Zi
+link /Co

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Car" package="pecl3.src" visibility="public" xPosition="20.0" yPosition="24.0">
+      <Fields>
+        <Field name="number" type="int" visibility="private" isFinal="true"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="freePump" type="PriorityBlockingQueue&lt;Pump&gt;" visibility="private" isFinal="true"/>
+        <Field name="caredPump" type="BlockingQueue&lt;Pump&gt;" visibility="private" isFinal="true"/>
+        <Field name="car" type="BlockingQueue&lt;Car&gt;" visibility="private" isFinal="true"/>
+        <Field name="visual" type="FuelStationInterface" visibility="private" isFinal="true"/>
+        <Field name="stop" type="StopPoint" visibility="private" isFinal="true"/>
+        <Field name="controller" type="Controller" visibility="private" isFinal="true"/>
+        <Field name="running" type="boolean" visibility="private"/>
+        <Field name="currentThread" type="Thread" visibility="private"/>
+        <Field name="semaphore" type="Semaphore" visibility="private" isFinal="true"/>
+        <Field name="carBuffer" type="LinkedBlockingQueue&lt;Car&gt;" visibility="private" isFinal="true"/>
+        <Field name="pumpBuffer" type="ConcurrentHashMap&lt;Integer, String&gt;" visibility="private" isFinal="true"/>
+        <Field name="debugState" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="number"/>
+          <Argument type="Log" name="log"/>
+          <Argument type="PriorityBlockingQueue&lt;Pump&gt;" name="freePump"/>
+          <Argument type="LinkedBlockingQueue&lt;Pump&gt;" name="caredPump"/>
+          <Argument type="LinkedBlockingQueue&lt;Car&gt;" name="car"/>
+          <Argument type="FuelStationInterface" name="visual"/>
+          <Argument type="StopPoint" name="stop"/>
+          <Argument type="Controller" name="controller"/>
+          <Argument type="Semaphore" name="semaphore"/>
+          <Argument type="LinkedBlockingQueue&lt;Car&gt;" name="carBuffer"/>
+          <Argument type="ConcurrentHashMap&lt;Integer, String&gt;" name="pumpBuffer"/>
+          <Argument type="boolean" name="debugState"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="interruptT" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="notifyT" returnType="void" visibility="public"/>
+        <Method name="getID" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FuelStation" package="pecl3.src" visibility="public" xPosition="941.0" yPosition="1045.0">
+      <Fields>
+        <Field name="PUMPS" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="WORKERS" type="int" visibility="public" isFinal="true"/>
+        <Field name="CARS" type="int" visibility="public" isFinal="true"/>
+        <Field name="MAX_THEADS" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="freePump" type="PriorityBlockingQueue&lt;Pump&gt;" visibility="private" isFinal="true"/>
+        <Field name="caredPump" type="LinkedBlockingQueue&lt;Pump&gt;" visibility="private" isFinal="true"/>
+        <Field name="car" type="LinkedBlockingQueue&lt;Car&gt;" visibility="private" isFinal="true"/>
+        <Field name="worker" type="Worker[]" visibility="private" isFinal="true"/>
+        <Field name="visual" type="FuelStationInterface" visibility="private" isFinal="true"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="executor" type="ExecutorService" visibility="private" isFinal="true"/>
+        <Field name="stop" type="StopPoint" visibility="private" isFinal="true"/>
+        <Field name="timeToWait" type="int" visibility="private"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+        <Field name="running" type="boolean" visibility="private"/>
+        <Field name="currentThread" type="Thread" visibility="private"/>
+        <Field name="count" type="CountDownLatch" visibility="private" isFinal="true"/>
+        <Field name="end" type="CountDownLatch" visibility="private" isFinal="true"/>
+        <Field name="start" type="CountDownLatch" visibility="private" isFinal="true"/>
+        <Field name="semaphore" type="Semaphore" visibility="private" isFinal="true"/>
+        <Field name="carBuffer" type="LinkedBlockingQueue&lt;Car&gt;" visibility="private" isFinal="true"/>
+        <Field name="workerBuffer" type="LinkedBlockingQueue&lt;Worker&gt;" visibility="private" isFinal="true"/>
+        <Field name="pumpBufferCar" type="ConcurrentHashMap&lt;Integer, String&gt;" visibility="private" isFinal="true"/>
+        <Field name="pumpBufferWorker" type="ConcurrentHashMap&lt;Integer, String&gt;" visibility="private" isFinal="true"/>
+        <Field name="server" type="Server" visibility="private" isFinal="true"/>
+        <Field name="recollector" type="Recollector" visibility="private" isFinal="true"/>
+        <Field name="debugState" type="boolean[]" visibility="private" isFinal="true"/>
+        <Field name="finalState" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FuelStationInterface" name="visual"/>
+          <Argument type="int" name="workers"/>
+          <Argument type="int" name="cars"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="pauseSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="resumeSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="getWorkers" returnType="int" visibility="public"/>
+        <Method name="getCars" returnType="int" visibility="public"/>
+        <Method name="setTime" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="time"/>
+        </Method>
+        <Method name="useEXE" returnType="ExecutorService" visibility="private" isSynchronized="true"/>
+        <Method name="interruptT" returnType="boolean" visibility="public" isSynchronized="true"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getStatus" returnType="String" visibility="public"/>
+        <Method name="barrera" returnType="void" visibility="public">
+          <Argument type="boolean" name="state"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Log" package="pecl3.src" visibility="public" xPosition="839.0" yPosition="575.0">
+      <Fields>
+        <Field name="log" type="ConcurrentHashMap&lt;String, String&gt;" visibility="private" isFinal="true"/>
+        <Field name="evoluvionGasolinera" type="LinkedBlockingQueue&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="initialTime" type="long" visibility="private" isFinal="true"/>
+        <Field name="visual" type="FuelStationInterface" visibility="private" isFinal="true"/>
+        <Field name="debugState" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FuelStationInterface" name="visual"/>
+          <Argument type="boolean" name="debugState"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="write" returnType="void" visibility="public">
+          <Argument type="String" name="key"/>
+          <Argument type="String" name="txt"/>
+        </Method>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="relativeTime" returnType="long" visibility="public"/>
+        <Method name="retriveLog" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pump" package="pecl3.src" visibility="public" xPosition="1412.0" yPosition="975.0">
+      <Fields>
+        <Field name="number" type="int" visibility="private" isFinal="true"/>
+        <Field name="car" type="Car" visibility="private"/>
+        <Field name="worker" type="Worker" visibility="private"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="stop" type="StopPoint" visibility="private" isFinal="true"/>
+        <Field name="controller" type="Controller" visibility="private" isFinal="true"/>
+        <Field name="running" type="boolean" visibility="private"/>
+        <Field name="currentThread" type="Thread" visibility="private"/>
+        <Field name="semaphore" type="Semaphore" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="number"/>
+          <Argument type="Log" name="log"/>
+          <Argument type="StopPoint" name="stop"/>
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addCar" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="Car" name="car"/>
+        </Method>
+        <Method name="addWorker" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="Worker" name="worker"/>
+        </Method>
+        <Method name="getCar" returnType="String" visibility="public" isSynchronized="true"/>
+        <Method name="getCarID" returnType="String" visibility="public" isSynchronized="true"/>
+        <Method name="getWorkerID" returnType="String" visibility="public" isSynchronized="true"/>
+        <Method name="getNumber" returnType="int" visibility="public" isSynchronized="true"/>
+        <Method name="waitCar" returnType="void" visibility="public"/>
+        <Method name="clear" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="waitWorker" returnType="void" visibility="public"/>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="interruptT" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Pump" name="other"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Recollector" package="pecl3.src" visibility="public" xPosition="2153.0" yPosition="311.0">
+      <Fields>
+        <Field name="fuelStation" type="FuelStation" visibility="private" isFinal="true"/>
+        <Field name="fuelStationInterface" type="FuelStationInterface" visibility="private" isFinal="true"/>
+        <Field name="control" type="AtomicBoolean" visibility="private" isFinal="true"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="time" type="int" visibility="private" isFinal="true"/>
+        <Field name="write" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FuelStation" name="fuelStation"/>
+          <Argument type="FuelStationInterface" name="fuelStationInterface"/>
+          <Argument type="Log" name="log"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReciverUDPServer" package="pecl3.src.conectivity" visibility="public" xPosition="1772.0" yPosition="759.0">
+      <Fields>
+        <Field name="control" type="AtomicBoolean" visibility="private" isFinal="true"/>
+        <Field name="socket" type="DatagramSocket" visibility="private"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Log" name="log"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SenderUDPServer" package="pecl3.src.conectivity" visibility="public" xPosition="2007.0" yPosition="928.0">
+      <Fields>
+        <Field name="add" type="InetAddress" visibility="private" isFinal="true"/>
+        <Field name="port" type="int" visibility="private" isFinal="true"/>
+        <Field name="socket" type="DatagramSocket" visibility="private"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="InetAddress" name="add"/>
+          <Argument type="int" name="port"/>
+          <Argument type="Log" name="log"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Server" package="pecl3.src.conectivity" visibility="public" xPosition="2039.0" yPosition="575.0">
+      <Fields>
+        <Field name="server" type="ServerSocket" visibility="private"/>
+        <Field name="socket" type="Socket" visibility="private"/>
+        <Field name="control" type="AtomicBoolean" visibility="private" isFinal="true"/>
+        <Field name="executor" type="ExecutorService" visibility="private" isFinal="true"/>
+        <Field name="services" type="ConcurrentHashMap&lt;Integer, ServerReciver&gt;" visibility="private" isFinal="true"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="sender" type="ServerSender" visibility="private" isFinal="true"/>
+        <Field name="end" type="CountDownLatch" visibility="private" isFinal="true"/>
+        <Field name="udp" type="ReciverUDPServer" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Log" name="log"/>
+          <Argument type="FuelStation" name="fuelStation"/>
+          <Argument type="CountDownLatch" name="end"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="end" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="toRemove" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="toRemove"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServerReciver" package="pecl3.src.conectivity" visibility="public" xPosition="20.0" yPosition="560.0">
+      <Fields>
+        <Field name="sender" type="ServerSender" visibility="private" isFinal="true"/>
+        <Field name="id" type="int" visibility="private" isFinal="true"/>
+        <Field name="stream" type="DataInputStream" visibility="private"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="control" type="AtomicBoolean" visibility="private" isFinal="true"/>
+        <Field name="socket" type="Socket" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Socket" name="socket"/>
+          <Argument type="int" name="id"/>
+          <Argument type="ServerSender" name="sender"/>
+          <Argument type="Log" name="log"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ServerSender" package="pecl3.src.conectivity" visibility="public" xPosition="415.0" yPosition="1111.0">
+      <Fields>
+        <Field name="stream" type="ConcurrentHashMap&lt;Integer, DataOutputStream&gt;" visibility="private" isFinal="true"/>
+        <Field name="fuelStation" type="FuelStation" visibility="private" isFinal="true"/>
+        <Field name="log" type="Log" visibility="private" isFinal="true"/>
+        <Field name="control" type="AtomicBoolean" visibility="private" isFinal="true"/>
+        <Field name="thread" type="Thread" visibility="private"/>
+        <Field name="server" type="Server" visibility="private" isFinal="true"/>
+        <Field name="time" type="int" visibility="private" isFinal="true"/>
+        <Field name="write" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FuelStation" name="fuelStation"/>
+          <Argument type="Log" name="log"/>
+          <Argument type="Server" name="server"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Socket" name="socket"/>
+          <Argument type="int" name="id"/>
+          <Argument type="Server" name="server"/>
+        </Method>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="remove" returnType="void" visibility="public">
+          <Argument type="int" name="toRemove"/>
+        </Method>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="barrera" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="log" source="pecl3.src.Recollector" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.conectivity.SenderUDPServer" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.FuelStation" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.conectivity.ServerSender" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.conectivity.ReciverUDPServer" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.Car" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.conectivity.ServerReciver" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.Pump" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="pecl3.src.conectivity.Server" target="pecl3.src.Log" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

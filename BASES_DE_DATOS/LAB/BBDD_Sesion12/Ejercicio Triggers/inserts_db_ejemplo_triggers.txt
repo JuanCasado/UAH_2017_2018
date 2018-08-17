@@ -1,0 +1,70 @@
+INSERT INTO public.empresa(
+            cif, nombre)
+    VALUES  ('e01', 'KAGADA Corporation'),
+			('e02', 'Imprenta Harry Plotter'),
+			('e03', 'Lacteos Vaca Loca'),
+			('e04', 'Asco FOODS'),
+			('e05', 'Libreria de Libros'),
+			('e06', 'Seguros Carabobo'),
+			('e07', 'Restaurante L´Arcada'),
+			('e08', 'Herbolario Sidroga');
+
+INSERT INTO public.departamento(
+            id_dpto, cif, nombre)
+    VALUES  ('d01', 'e01', 'Comercial-Ventas'),
+			('d02', 'e01', 'Administracion'),
+			('d03', 'e01', 'Gestion'),
+			('d04', 'e02', 'Marketing'),
+			('d05', 'e02', 'Comercial-Ventas'),
+			('d06', 'e03', 'Marketing'),
+			('d07', 'e03', 'Financiero'),
+			('d08', 'e03', 'Gestion'),
+			('d09', 'e04', 'Financiero'),
+			('d10', 'e04', 'Administracion'),
+			('d11', 'e04', 'Recursos Humanos');
+
+INSERT INTO public.fundacion(
+            codigo, cif, nombre, dedicacion)
+     VALUES ('f01', 'e05', 'Fundacion Universidad-Empresa', 'Labor Social'),
+			('f02', 'e05', 'Fundacion Macrofinanzas', 'Economía'),
+			('f03', 'e06', 'Fundacion Prohormigas', 'Naturaleza'),
+			('f04', 'e06', 'Fundacion Carabobo', 'Labor Social'),
+			('f05', 'e07', 'Arcade Foundation Center', 'Labor Social'),
+			('f06', 'e07', 'Fundacion ARK', 'Salud'),
+			('f07', 'e08', 'Fundacion Healthy', 'Salud'),
+			('f08', 'e08', 'Movimiento Planeta', 'Naturaleza');
+
+INSERT INTO public.empleado(
+            dni, nombre, apellidos, sueldo, sueldo_anual, id_dpto)
+     VALUES ('05926371J', 'Miguel', 'Marco Gol', 750, 1, 'd01'),
+			('62039847H', 'Aitor', 'Menta Fuerte', 850, 1, 'd02'),
+			('01293874R', 'Ines', 'Queleto', 1000, 1, 'd03'),
+			('03918475Q', 'Elmer', 'Curio', 1200, 1, 'd04'),
+			('34289017C', 'Ana', 'Tomia', 1500, 1, 'd05');
+
+
+INSERT INTO public.cliente(
+            dni, nombre, email)
+     VALUES ('05476345X', 'Armando Casas', 'a.casas@email.com'),
+			('01298334D', 'Hector Tuga', 'h.tuga@email.com'),
+			('01923878K', 'Lola Mento', 'lola@email.com'),
+			('38901475R', 'Matias Queroso', 'matiasq@email.com'),
+			('10298377F', 'Elsa Pato', 'elsa77@email.com');
+
+INSERT INTO public.producto(
+            id, nombre, descripcion, precio, id_dpto)
+     VALUES (1, 'Churrasic Park', '500g de Panceta', 2.4, 'd01'),
+			(2, 'Gelatina Colageno', 'Bote con 10 dosis de 20ml', 30, 'd05'),
+			(3, 'Galletas', 'Pack de 750g de galletas tostadas', 12.56, 'd03'),
+			(4, 'Cily Willy', 'Bote 750ml', 7.89, 'd04'),
+			(5, 'Brick Leche', 'Leche desnatada 1L', 15.99, 'd02');
+
+INSERT INTO public.obtiene(
+            id, dni, fecha)
+     VALUES (1, '05476345X', '2018-01-01'),
+			(3, '01298334D', '2018-02-10'),
+			(2, '38901475R', '2018-03-20'),
+			(3, '01298334D', '2018-04-8'),
+			(4, '10298377F', '2018-03-15'),
+			(1, '38901475R', '2018-02-26'),
+			(4, '01923878K', '2018-01-30');

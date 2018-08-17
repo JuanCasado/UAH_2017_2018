@@ -1,0 +1,12 @@
+int a = 34;
+int b;
+int c = -5;
+float d;
+int D;
+
+int main (int argc, char *argv[])
+{
+    int x = 3, y;
+
+    return 0;
+}

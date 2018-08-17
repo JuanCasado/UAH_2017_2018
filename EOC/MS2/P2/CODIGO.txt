@@ -1,0 +1,4 @@
+xor ax,ax
+mov al,operando1
+add al,operando2
+mov resultado,ax

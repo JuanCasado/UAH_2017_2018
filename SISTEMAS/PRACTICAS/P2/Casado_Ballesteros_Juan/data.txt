@@ -1,0 +1,10 @@
+
+
+	Práctica realizada por : Juan Casado Ballesteros.
+
+	Se han realizado todos los apartados (lru, fifo y fifo2op)
+
+	Se ingluyen en la carpeta de gráficas las gráficas generadas con gnuplot utilizando 
+	los datos de calcular_cdt de aquellos valores de sim_pag dados en la memoria de la pŕactica. 
+	Se ha comprobado que los datos de sim_pag obtenidos coinciden con los datos proporcionados.
+	En el código mediante comentarios se explica qué se está haciendo en cada una de las partes modificadas.

@@ -1,0 +1,70 @@
+--------------------------------------------------------------
+Server  - 34 -SERVER READY
+FuelStation  - 36 -FUEL STATION READY
+FuelStation  - 338 -WAITING FOR USER INPUT...
+Server UDP RECIVER  - 338 -UDP Server ON
+Server  - 338 -WAITING FOR CLIENT 863164277
+Recollector  - 355 -Started 
+FuelStation  - 142325 -FUEL STATION SIMULATION STARTS
+Worker 1  - 142325 -Esperando por un coche
+Worker 2  - 142326 -Esperando por un coche
+Worker 3  - 142326 -Esperando por un coche
+FuelStation  - 142326 -CAR 1 llegará en 3289 ms
+FuelStation  - 145616 -CAR 2 llegará en 1759 ms
+CAR 1  - 145616 -Ha llegado a la gasolinera
+CAR 1  - 145616 -Entra al parking
+CAR 1  - 145616 -Hay un surtidor libre
+CAR 1  - 145616 -Surtidor libre adquirido
+CAR 1  - 145616 -Espera en el Pump 1
+Worker 1  - 145616 -Hay coches para servir
+Worker 1  - 145616 -Comienza a servir en Pump 1 a CAR 1
+Pump 1  - 145617 -CAR 1 Será servido por Worker 1 en 5870ms
+FuelStation  - 146825 -SIMULATION PAUSED
+FuelStation  - 146826 -CAR CREATION SLEEP INTERRUPTED
+FuelStation  - 146826 -CAR PRODUCTION PAUSED
+Worker 2  - 146826 -INTERRUPTION WHILE WAITING FOR FREE PUM
+Worker 2  - 146826 -WORKER PAUSED
+Worker 1  - 146826 -WORKER INTERRUPTED
+Worker 1  - 146826 -WORKER PAUSED
+Pump 1  - 146826 -SLEEP PUMP INTERRUPTED
+Pump 1  - 146826 -PUMP PAUSED
+CAR 1  - 146826 -INTERRUPTION WHILE WAITING FOR A WORKER
+CAR 1  - 146826 -CAR PAUSED
+FuelStation  - 152213 -BRUTE FORCE CLOSING
+FuelStation  - 152213 -CAR PRODUCTION RESUMED
+FuelStation  - 152213 -CAR 2 llegará en 1665 ms
+FuelStation  - 152213 -CAR CREATION SLEEP INTERRUPTED
+FuelStation  - 152213 -FORCE TERMINATION
+Worker 2  - 152213 -CARED_PUMP WAS EMPTY
+FuelStation  - 152213 -CAR 3 llegará en 1562 ms
+Worker 3  - 152213 -INTERRUPTION WHILE WAITING FOR FREE PUM
+Worker 3  - 152213 -WORKER FORCED TERMINATION
+Recollector  - 152213 -Interrupted 
+Worker 1  - 152213 -WORKER RESUMED
+Recollector  - 152213 -Ended 
+CAR 1  - 152213 -CAR RESUMED
+CAR 1  - 152214 -INTERRUPTION WHILE WAITING FOR A WORKER
+CAR 1  - 152214 -CAR FORCED END
+CAR 1  - 152214 -Abandona la gasolinera
+Worker 3  - 152214 -CARED_PUMP WAS EMPTY
+Pump 1  - 152214 -PUMP RESUMED
+Worker 3  - 152214 -Ha terminado
+Pump 1  - 152214 -CAR 1 Será servido por Worker 1 en 4476ms
+FuelStation  - 153776 -ALL CARS CREATED
+FuelStation  - 153776 -ALL CARS ENDED, WORKERS GET INTERRUPT
+Worker 1  - 153777 -WORKER INTERRUPTED
+Worker 1  - 153777 -WORKER FORCED TERMINATION
+Worker 2  - 153777 -INTERRUPTED WHILE WAITING FOR EXECUTOR TO END
+Worker 2  - 153777 -Ha terminado
+Pump 1  - 153777 -SLEEP PUMP INTERRUPTED
+Pump 1  - 153777 -PUMP FORCED TERMINATION
+Worker 1  - 153777 -Ha terminado
+Server UDP RECIVER  - 153779 -UDP CLOSED
+Server  - 153779 -CLOSING SERVER
+Server UDP RECIVER  - 153779 -NO IO
+ServerSender  - 153780 -SENDER END
+ServerSender  - 153780 -SENDER CLOSED CORRECTLY
+Server  - 153782 -SERVER CLOSED CORRECTLY
+Server  - 153783 -NO HUBO CLIENTE EN 863164277
+FuelStation  - 153783 -FUEL STATION SIMULATION ENDED CORRECTLY
+--------------------------------------------------------------

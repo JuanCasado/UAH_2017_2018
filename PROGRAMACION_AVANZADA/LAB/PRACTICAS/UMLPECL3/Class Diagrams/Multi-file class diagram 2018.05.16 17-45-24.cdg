@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="BadGuy" package="shutterearth.characters" visibility="public" xPosition="-9.0" yPosition="405.0">
+      <Fields>
+        <Field name="hero" type="Hero" visibility="private" isFinal="true"/>
+        <Field name="stage" type="int" visibility="private" isFinal="true"/>
+        <Field name="revived" type="boolean" visibility="private"/>
+        <Field name="done" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="stage"/>
+          <Argument type="Hero" name="hero"/>
+          <Argument type="Field" name="field"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="goUp" returnType="void" visibility="public"/>
+        <Method name="goLeft" returnType="void" visibility="public"/>
+        <Method name="goRight" returnType="void" visibility="public"/>
+        <Method name="goDown" returnType="void" visibility="public"/>
+        <Method name="shot" returnType="void" visibility="public"/>
+        <Method name="revive" returnType="void" visibility="public"/>
+        <Method name="Render" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="place" returnType="void" visibility="public">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setBounds" returnType="void" visibility="public">
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setX" returnType="void" visibility="protected">
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="setY" returnType="void" visibility="protected">
+          <Argument type="float" name="y"/>
+        </Method>
+        <Method name="getInfo" returnType="int" visibility="public"/>
+        <Method name="doShotAnimation" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Charact" package="shutterearth.characters" visibility="public" isAbstract="true" xPosition="1160.0" yPosition="1449.0">
+      <Fields>
+        <Field name="healthCurrent" type="int" visibility="protected"/>
+        <Field name="w" type="float" visibility="protected"/>
+        <Field name="h" type="float" visibility="protected"/>
+        <Field name="xVel" type="float" visibility="protected"/>
+        <Field name="yVel" type="float" visibility="protected"/>
+        <Field name="xPos" type="float" visibility="protected"/>
+        <Field name="yPos" type="float" visibility="protected"/>
+        <Field name="inventory" type="Inventory" visibility="protected"/>
+        <Field name="healthMax" type="int" visibility="protected"/>
+        <Field name="floor" type="float" visibility="protected"/>
+        <Field name="over" type="boolean" visibility="protected"/>
+        <Field name="jumpUp" type="boolean" visibility="protected"/>
+        <Field name="jumpDown" type="boolean" visibility="protected"/>
+        <Field name="line" type="Rectangle" visibility="protected"/>
+        <Field name="colum" type="Rectangle" visibility="protected"/>
+        <Field name="box" type="Rectangle" visibility="protected"/>
+        <Field name="animation" type="boolean" visibility="protected"/>
+        <Field name="counterAnimation" type="int" visibility="protected"/>
+        <Field name="animationTime" type="int" visibility="protected"/>
+        <Field name="active" type="boolean" visibility="protected"/>
+        <Field name="field" type="Field" visibility="protected"/>
+        <Field name="enemy" type="ArrayList&lt;Charact&gt;" visibility="package"/>
+        <Field name="called" type="boolean" visibility="protected"/>
+        <Field name="borderRoom" type="int" visibility="protected"/>
+        <Field name="room" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Render" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="goUp" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="goLeft" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="goRight" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="goDown" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="shot" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="place" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setBounds" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="boundSetter" returnType="void" visibility="protected">
+          <Argument type="float[]" name="bounds"/>
+        </Method>
+        <Method name="setX" returnType="void" visibility="protected" isAbstract="true">
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="setY" returnType="void" visibility="protected" isAbstract="true">
+          <Argument type="float" name="y"/>
+        </Method>
+        <Method name="doShotAnimation" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="getCurrentHealth" returnType="int" visibility="public"/>
+        <Method name="getDamage" returnType="void" visibility="public">
+          <Argument type="int" name="damage"/>
+        </Method>
+        <Method name="isAlive" returnType="boolean" visibility="public"/>
+        <Method name="getLine" returnType="Rectangle" visibility="public"/>
+        <Method name="getColum" returnType="Rectangle" visibility="public"/>
+        <Method name="getBox" returnType="Rectangle" visibility="public"/>
+        <Method name="isInLine" returnType="boolean" visibility="public">
+          <Argument type="Rectangle" name="rect"/>
+        </Method>
+        <Method name="isInRoom" returnType="boolean" visibility="public">
+          <Argument type="Rectangle" name="rect"/>
+        </Method>
+        <Method name="isHited" returnType="boolean" visibility="public">
+          <Argument type="Rectangle" name="rect"/>
+        </Method>
+        <Method name="getH" returnType="float" visibility="public"/>
+        <Method name="getW" returnType="float" visibility="public"/>
+        <Method name="debug" returnType="Rectangle[]" visibility="public"/>
+        <Method name="getInventory" returnType="Inventory" visibility="public"/>
+        <Method name="getY" returnType="float" visibility="public"/>
+        <Method name="getX" returnType="float" visibility="public"/>
+        <Method name="getFace" returnType="boolean" visibility="public"/>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="startI" returnType="void" visibility="public"/>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="pause" returnType="void" visibility="public"/>
+        <Method name="wake" returnType="void" visibility="public"/>
+        <Method name="addEnemys" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Charact&gt;" name="enemy"/>
+        </Method>
+        <Method name="getEnemys" returnType="ArrayList&lt;Charact&gt;" visibility="public"/>
+        <Method name="activate" returnType="void" visibility="public"/>
+        <Method name="getHealthMax" returnType="int" visibility="public"/>
+        <Method name="hasKilled" returnType="void" visibility="public">
+          <Argument type="int" name="money"/>
+        </Method>
+        <Method name="getInfo" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="setHudAlien" returnType="void" visibility="public">
+          <Argument type="Charact" name="enemy"/>
+          <Argument type="int" name="LastLive"/>
+        </Method>
+        <Method name="jumping" returnType="boolean" visibility="public"/>
+        <Method name="getBorder" returnType="int" visibility="public"/>
+        <Method name="bulletControl" returnType="float[]" visibility="public">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Enemy" package="shutterearth.characters" visibility="public" xPosition="558.0" yPosition="20.0">
+      <Fields>
+        <Field name="type" type="int" visibility="private" isFinal="true"/>
+        <Field name="hero" type="Hero" visibility="private" isFinal="true"/>
+        <Field name="errorCount" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="type"/>
+          <Argument type="int" name="stage"/>
+          <Argument type="Hero" name="hero"/>
+          <Argument type="Field" name="field"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Render" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="goUp" returnType="void" visibility="public"/>
+        <Method name="goLeft" returnType="void" visibility="public"/>
+        <Method name="goRight" returnType="void" visibility="public"/>
+        <Method name="goDown" returnType="void" visibility="public"/>
+        <Method name="shot" returnType="void" visibility="public"/>
+        <Method name="place" returnType="void" visibility="public">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setBounds" returnType="void" visibility="public">
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setX" returnType="void" visibility="protected">
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="setY" returnType="void" visibility="protected">
+          <Argument type="float" name="y"/>
+        </Method>
+        <Method name="getInfo" returnType="int" visibility="public"/>
+        <Method name="doShotAnimation" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gun" package="shutterearth.characters" visibility="public" xPosition="1416.0" yPosition="35.0">
+      <Fields>
+        <Field name="damage" type="int" visibility="private" isFinal="true"/>
+        <Field name="delay" type="int" visibility="private" isFinal="true"/>
+        <Field name="speed" type="int" visibility="private" isFinal="true"/>
+        <Field name="consume" type="int" visibility="private" isFinal="true"/>
+        <Field name="id" type="int" visibility="private" isFinal="true"/>
+        <Field name="level" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="enemy"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDamage" returnType="int" visibility="public"/>
+        <Method name="getSpeed" returnType="int" visibility="public"/>
+        <Method name="getDelay" returnType="int" visibility="public"/>
+        <Method name="getConsume" returnType="int" visibility="public"/>
+        <Method name="getID" returnType="int" visibility="public"/>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hero" package="shutterearth.characters" visibility="public" xPosition="1249.0" yPosition="374.0">
+      <Fields>
+        <Field name="user" type="String" visibility="private" isFinal="true"/>
+        <Field name="pswd" type="String" visibility="private" isFinal="true"/>
+        <Field name="permission" type="Boolean" visibility="private" isFinal="true"/>
+        <Field name="stage" type="int" visibility="private"/>
+        <Field name="bullets" type="int" visibility="private"/>
+        <Field name="kills" type="int" visibility="private"/>
+        <Field name="wMax" type="float" visibility="private" isFinal="true"/>
+        <Field name="wMin" type="float" visibility="private" isFinal="true"/>
+        <Field name="errorCount" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="SavedHero" name="hero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="goUp" returnType="void" visibility="public"/>
+        <Method name="goLeft" returnType="void" visibility="public"/>
+        <Method name="goRight" returnType="void" visibility="public"/>
+        <Method name="goDown" returnType="void" visibility="public"/>
+        <Method name="shot" returnType="void" visibility="public"/>
+        <Method name="Render" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="place" returnType="void" visibility="public">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setBounds" returnType="void" visibility="public">
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setX" returnType="void" visibility="protected">
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="setY" returnType="void" visibility="protected">
+          <Argument type="float" name="y"/>
+        </Method>
+        <Method name="hasKilled" returnType="void" visibility="public">
+          <Argument type="int" name="money"/>
+        </Method>
+        <Method name="inventroyLeft" returnType="void" visibility="public"/>
+        <Method name="inventoryRight" returnType="void" visibility="public"/>
+        <Method name="setStage" returnType="void" visibility="public">
+          <Argument type="int" name="stage"/>
+        </Method>
+        <Method name="getUser" returnType="String" visibility="public"/>
+        <Method name="getPswd" returnType="String" visibility="public"/>
+        <Method name="getHealthCurrent" returnType="int" visibility="public"/>
+        <Method name="getStage" returnType="int" visibility="public"/>
+        <Method name="getBullets" returnType="int" visibility="public"/>
+        <Method name="getKills" returnType="int" visibility="public"/>
+        <Method name="save" returnType="SavedHero" visibility="public"/>
+        <Method name="getPermission" returnType="Boolean" visibility="public"/>
+        <Method name="saveInventory" returnType="ArrayList&lt;int[]&gt;" visibility="public"/>
+        <Method name="getNumberOfGuns" returnType="int" visibility="public"/>
+        <Method name="setField" returnType="void" visibility="public">
+          <Argument type="Field" name="field"/>
+        </Method>
+        <Method name="getInfo" returnType="int" visibility="public"/>
+        <Method name="doShotAnimation" returnType="void" visibility="public"/>
+        <Method name="setHudAlien" returnType="void" visibility="public">
+          <Argument type="Charact" name="enemy"/>
+          <Argument type="int" name="LastLive"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Inventory" package="shutterearth.characters" visibility="public" xPosition="1912.0" yPosition="120.0">
+      <Fields>
+        <Field name="maxGun" type="int" visibility="private" isFinal="true"/>
+        <Field name="inventory" type="ArrayList&lt;Gun&gt;" visibility="private" isFinal="true"/>
+        <Field name="index" type="int" visibility="private"/>
+        <Field name="shots" type="ArrayList&lt;Shot&gt;" visibility="private" isFinal="true"/>
+        <Field name="count" type="ArrayList&lt;Shot&gt;" visibility="private" isFinal="true"/>
+        <Field name="toRemoveS" type="ArrayList&lt;Shot&gt;" visibility="private" isFinal="true"/>
+        <Field name="label" type="ArrayList&lt;Label&gt;" visibility="private" isFinal="true"/>
+        <Field name="toRemoveL" type="ArrayList&lt;Label&gt;" visibility="private" isFinal="true"/>
+        <Field name="hero" type="Charact" visibility="private" isFinal="true"/>
+        <Field name="delay" type="int" visibility="private"/>
+        <Field name="counter" type="int" visibility="private"/>
+        <Field name="from" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;int[]&gt;" name="guns"/>
+          <Argument type="Charact" name="hero"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int[]" name="gun"/>
+          <Argument type="Charact" name="hero"/>
+          <Argument type="int" name="from"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="rightGun" returnType="void" visibility="public"/>
+        <Method name="lefttGun" returnType="void" visibility="public"/>
+        <Method name="getGunID" returnType="int" visibility="public"/>
+        <Method name="getCost" returnType="int" visibility="public"/>
+        <Method name="shot" returnType="void" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="end" returnType="void" visibility="public"/>
+        <Method name="Render" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="save" returnType="ArrayList&lt;int[]&gt;" visibility="public"/>
+        <Method name="getNumberOfGuns" returnType="int" visibility="public"/>
+        <Method name="die" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ship" package="shutterearth.characters" visibility="public" xPosition="2129.0" yPosition="1173.0">
+      <Fields>
+        <Field name="state" type="int" visibility="private"/>
+        <Field name="side" type="int" visibility="private"/>
+        <Field name="first" type="boolean" visibility="private"/>
+        <Field name="target" type="float" visibility="private"/>
+        <Field name="hero" type="Hero" visibility="private" isFinal="true"/>
+        <Field name="count" type="float" visibility="private"/>
+        <Field name="gess" type="int" visibility="private"/>
+        <Field name="wait" type="int" visibility="private"/>
+        <Field name="type" type="int" visibility="private" isFinal="true"/>
+        <Field name="bullets" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="type"/>
+          <Argument type="int" name="stage"/>
+          <Argument type="Hero" name="hero"/>
+          <Argument type="Field" name="field"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Render" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="Graphics" name="g"/>
+        </Method>
+        <Method name="Update" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+          <Argument type="float" name="t"/>
+        </Method>
+        <Method name="setX" returnType="void" visibility="protected">
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="setY" returnType="void" visibility="protected">
+          <Argument type="float" name="y"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="GameContainer" name="gc"/>
+        </Method>
+        <Method name="goUp" returnType="void" visibility="public"/>
+        <Method name="goLeft" returnType="void" visibility="public"/>
+        <Method name="goRight" returnType="void" visibility="public"/>
+        <Method name="goDown" returnType="void" visibility="public"/>
+        <Method name="shot" returnType="void" visibility="public"/>
+        <Method name="getFace" returnType="boolean" visibility="public"/>
+        <Method name="debug" returnType="Rectangle[]" visibility="public"/>
+        <Method name="place" returnType="void" visibility="public">
+          <Argument type="float" name="x"/>
+          <Argument type="float" name="y"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="setBounds" returnType="void" visibility="public">
+          <Argument type="float" name="left"/>
+          <Argument type="float" name="right"/>
+          <Argument type="float" name="floor"/>
+          <Argument type="int" name="borderRoom"/>
+          <Argument type="int" name="room"/>
+        </Method>
+        <Method name="getInfo" returnType="int" visibility="public"/>
+        <Method name="doShotAnimation" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Shot" package="shutterearth.characters" visibility="public" xPosition="2434.0" yPosition="97.0">
+      <Fields>
+        <Field name="delay" type="int" visibility="private"/>
+        <Field name="x" type="float" visibility="private"/>
+        <Field name="y" type="float" visibility="private"/>
+        <Field name="w" type="float" visibility="private" isFinal="true"/>
+        <Field name="h" type="float" visibility="private" isFinal="true"/>
+        <Field name="first" type="boolean" visibility="private"/>
+        <Field name="hero" type="Charact" visibility="private" isFinal="true"/>
+        <Field name="updateRate" type="int" visibility="private" isFinal="true"/>
+        <Field name="face" type="boolean" visibility="private"/>
+        <Field name="maxR" type="float" visibility="private"/>
+        <Field name="maxL" type="float" visibility="private"/>
+        <Field name="box" type="Rectangle" visibility="private" isFinal="true"/>
+        <Field name="offset" type="int" visibility="private" isFinal="true"/>
+        <Field name="damage" type="int" visibility="private" isFinal="true"/>
+        <Field name="bounds" type="float[]" visibility="private"/>
+        <Field name="counter" type="float" visibility="private"/>
+        <Field name="hited" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Gun" name="gun"/>
+          <Argument type="Charact" name="hero"/>
+          <Argument type="int" name="offset"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setHited" returnType="void" visibility="public">
+          <Argument type="int" name="hited"/>
+        </Method>
+        <Method name="getHited" returnType="int" visibility="public"/>
+        <Method name="getDamage" returnType="int" visibility="public"/>
+        <Method name="getW" returnType="float" visibility="public"/>
+        <Method name="getH" returnType="float" visibility="public"/>
+        <Method name="count" returnType="void" visibility="public">
+          <Argument type="float" name="delta"/>
+        </Method>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="float" name="delta"/>
+        </Method>
+        <Method name="getBox" returnType="Rectangle" visibility="public"/>
+        <Method name="getX" returnType="float" visibility="public"/>
+        <Method name="getY" returnType="float" visibility="public"/>
+        <Method name="getFace" returnType="boolean" visibility="public"/>
+        <Method name="isDwable" returnType="boolean" visibility="public"/>
+        <Method name="ended" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="shutterearth.characters.Hero" target="shutterearth.characters.Charact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="shutterearth.characters.Ship" target="shutterearth.characters.Charact"/>
+    <HasRelation name="hero" source="shutterearth.characters.Enemy" target="shutterearth.characters.Hero" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hero" source="shutterearth.characters.Inventory" target="shutterearth.characters.Charact" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="enemy" source="shutterearth.characters.Charact" target="shutterearth.characters.Charact" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Charact&gt;"/>
+    <IsRelation name="is" source="shutterearth.characters.BadGuy" target="shutterearth.characters.Charact"/>
+    <HasRelation name="hero" source="shutterearth.characters.BadGuy" target="shutterearth.characters.Hero" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="shutterearth.characters.Charact" target="shutterearth.characters.Inventory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="shutterearth.characters.Enemy" target="shutterearth.characters.Charact"/>
+    <IsRelation name="is" source="shutterearth.characters.Hero" target="shutterearth.characters.Charact"/>
+    <HasRelation name="toRemoveS" source="shutterearth.characters.Inventory" target="shutterearth.characters.Shot" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Shot&gt;"/>
+    <HasRelation name="inventory" source="shutterearth.characters.Charact" target="shutterearth.characters.Inventory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="inventory" source="shutterearth.characters.Inventory" target="shutterearth.characters.Gun" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Gun&gt;"/>
+    <UseRelation source="shutterearth.characters.Charact" target="shutterearth.characters.Charact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hero" source="shutterearth.characters.Ship" target="shutterearth.characters.Hero" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="count" source="shutterearth.characters.Inventory" target="shutterearth.characters.Shot" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Shot&gt;"/>
+    <HasRelation name="hero" source="shutterearth.characters.Shot" target="shutterearth.characters.Charact" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="shots" source="shutterearth.characters.Inventory" target="shutterearth.characters.Shot" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Shot&gt;"/>
+    <UseRelation source="shutterearth.characters.Hero" target="shutterearth.characters.Hero" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

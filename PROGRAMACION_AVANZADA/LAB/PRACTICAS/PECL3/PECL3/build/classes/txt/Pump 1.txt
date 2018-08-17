@@ -1,0 +1,9 @@
+--------------------------------------------------------------
+ - 145617 -CAR 1 Será servido por Worker 1 en 5870ms
+ - 146826 -SLEEP PUMP INTERRUPTED
+ - 146826 -PUMP PAUSED
+ - 152214 -PUMP RESUMED
+ - 152214 -CAR 1 Será servido por Worker 1 en 4476ms
+ - 153777 -SLEEP PUMP INTERRUPTED
+ - 153777 -PUMP FORCED TERMINATION
+--------------------------------------------------------------

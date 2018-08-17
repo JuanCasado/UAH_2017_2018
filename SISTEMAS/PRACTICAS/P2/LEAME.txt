@@ -1,0 +1,9 @@
+Compile los programas proporcionados con la orden make:
+
+    user@host:$ make
+
+Una vez compilados, debería poder ejecutarlos. Por ejemplo:
+
+    user@host:$ ./contar_ops
+
+Lea el enunciado de la práctica (practica02.pdf) y siga las instrucciones que en él se especifican.

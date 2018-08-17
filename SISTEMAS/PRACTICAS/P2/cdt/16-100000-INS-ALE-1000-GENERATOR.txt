@@ -1,0 +1,12 @@
+set terminal postscript portrait enhanced mono dashed lw 1 "Arial" 9
+set encoding iso_8859_1
+set out "1-80-HEA-DES-100.eps"
+set size 1 , 1
+set size ratio 0.5
+set xlabel "\"Tiempo\" en operaciones de L/E"
+set ylabel "P\341ginas diferentes "
+set title " Conjunto de trabajo "
+plot "1-80-HEA-DES-100.txt" using 1:3 title "1-80-HEA-DES-100" with lines
+pause -1 "PULSE ENTER"
+exit
+

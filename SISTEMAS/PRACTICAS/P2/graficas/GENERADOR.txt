@@ -1,0 +1,10 @@
+set terminal postscript portrait enhanced \
+mono dashed lw 1 "Arial" 9
+set encoding iso_8859_1
+set out "QPA.eps"
+set size 1 , 0.5
+set size ratio 1
+set xlabel "TIEMPO"
+set ylabel "PAGINAS"
+set title "Conjunto de trabajo"
+plot "QPA.txt" using 1:3 title "QPA" with lines

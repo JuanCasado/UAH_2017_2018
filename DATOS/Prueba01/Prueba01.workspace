@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Prueba01" Database="" Version="10.0.0">
+  <Project Name="Prueba01" Path="Prueba01/Prueba01.project" Active="No"/>
+  <Project Name="Prueba02" Path="Prueba02/Prueba02.project" Active="No"/>
+  <Project Name="Prueba03" Path="Prueba03/Prueba03.project" Active="No"/>
+  <Project Name="Prueba04" Path="Prueba04/Prueba04.project" Active="No"/>
+  <Project Name="Prueba05" Path="Prueba05/Prueba05.project" Active="No"/>
+  <Project Name="Prueba06" Path="Prueba06/Prueba06.project" Active="No"/>
+  <Project Name="Prueba07" Path="Prueba07/Prueba07.project" Active="No"/>
+  <Project Name="Prueba08" Path="Prueba08/Prueba08.project" Active="No"/>
+  <Project Name="Prueba09" Path="Prueba09/Prueba09.project" Active="No"/>
+  <Project Name="Prueba10" Path="Prueba10/Prueba10.project" Active="No"/>
+  <Project Name="Prueba11" Path="Prueba11/Prueba11.project" Active="No"/>
+  <Project Name="Prueba12" Path="Prueba12/Prueba12.project" Active="No"/>
+  <Project Name="Ejemplo00" Path="Ejemplo00/Ejemplo00.project" Active="No"/>
+  <Project Name="Ejemplo01" Path="Ejemplo01/Ejemplo01.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Prueba01" ConfigName="Debug"/>
+      <Project Name="Prueba02" ConfigName="Debug"/>
+      <Project Name="Prueba03" ConfigName="Debug"/>
+      <Project Name="Prueba04" ConfigName="Debug"/>
+      <Project Name="Prueba05" ConfigName="Debug"/>
+      <Project Name="Prueba06" ConfigName="Debug"/>
+      <Project Name="Prueba07" ConfigName="Debug"/>
+      <Project Name="Prueba08" ConfigName="Debug"/>
+      <Project Name="Prueba09" ConfigName="Debug"/>
+      <Project Name="Prueba10" ConfigName="Debug"/>
+      <Project Name="Prueba11" ConfigName="Debug"/>
+      <Project Name="Prueba12" ConfigName="Debug"/>
+      <Project Name="Ejemplo00" ConfigName="Debug"/>
+      <Project Name="Ejemplo01" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Prueba01" ConfigName="Release"/>
+      <Project Name="Prueba02" ConfigName="Release"/>
+      <Project Name="Prueba03" ConfigName="Release"/>
+      <Project Name="Prueba04" ConfigName="Release"/>
+      <Project Name="Prueba05" ConfigName="Release"/>
+      <Project Name="Prueba06" ConfigName="Release"/>
+      <Project Name="Prueba07" ConfigName="Release"/>
+      <Project Name="Prueba08" ConfigName="Release"/>
+      <Project Name="Prueba09" ConfigName="Release"/>
+      <Project Name="Prueba10" ConfigName="Release"/>
+      <Project Name="Prueba11" ConfigName="Release"/>
+      <Project Name="Prueba12" ConfigName="Release"/>
+      <Project Name="Ejemplo00" ConfigName="Release"/>
+      <Project Name="Ejemplo01" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

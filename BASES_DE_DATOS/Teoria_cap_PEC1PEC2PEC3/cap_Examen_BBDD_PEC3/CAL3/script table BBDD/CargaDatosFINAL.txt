@@ -1,0 +1,275 @@
+--Product
+
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (001, 'Computers', 'Intel Core i7 2GHz', 'Asus X55C', 639 , 'Asus',
+            4);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (002, 'Phone', 'SamgsunAmolet, 16Gb', 'Samsung S6', 775, 
+            'Samsung',3);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (003, 'Gaming', '500Gb and BlueRay', 'PlayStation 4', 399, 
+            'Sony', 5);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (004, 'Tablets', 'Good for Studying', 'Ipad Air', 
+            1500, 'Apple', 1);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (005, 'TV', '50 inches, Full HD', 'LG356', 590, 
+            'LG',0);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (006, 'Gaming', ' 400Gb', 'Xbox one', '499', 
+            'Microsoft', 2);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (007, 'Phone', '64Gb', 'Iphone 6Plus', 699, 
+            'Apple', 5);      
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (008, 'Computers', '16GbRam NvidiaGT200x', 'PCGamer', 809, 
+            'Asus', 4);
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (009, 'TV', '48inches and 4K', 'Samsung T154', 899, 
+            'Samsung', 1); 
+INSERT INTO "Product"("Code_product", "Categorie", "Description", "Name", "Price_wtih_VAT", 
+            "Manufacturer", "Stock")
+    VALUES (010, 'Tablets', '8Gb, screen amolet', 'EnergySystem', 299, 
+            'Energy', 3); 
+
+--Offers
+
+INSERT INTO "Offer"("ID_offer", "Name", "Start_date", "End_date", "Price_offer")
+    VALUES (10, '2x1', '10/10/2015', '10/11/2015', 800);
+INSERT INTO "Offer"("ID_offer", "Name", "Start_date", "End_date", "Price_offer")
+    VALUES (11, '3x2','11/11/2015' , '11/12/2015', 1550);
+INSERT INTO "Offer"("ID_offer", "Name", "Start_date", "End_date", "Price_offer")
+    VALUES (12, '3x1', '12/12/2015', '01/01/2016', 499);
+INSERT INTO "Offer"("ID_offer", "Name", "Start_date", "End_date", "Price_offer")
+    VALUES (13, '30%', '13/01/2015', '13/05/2015', 1050);
+INSERT INTO "Offer"("ID_offer", "Name", "Start_date", "End_date", "Price_offer")
+    VALUES (14, '60%', '15/02/2015', '15/12/2015', 3.5);
+
+--Packs
+
+INSERT INTO public. "Packs" VALUES (100001, 599.50);
+INSERT INTO public. "Packs" VALUES (100002, 2399.00);
+INSERT INTO public. "Packs" VALUES (100003, 999.50);
+INSERT INTO public. "Packs" VALUES (100004, 399.00);
+
+--Reviews
+
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101011, '02/10/2015', 'Good', 6.5,001, 3453445 , 02025874);
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101012 , '03/1/2015 ', 'Very good ',7.5 ,002  , 3783463 ,2255748);
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101013 , '18/04/2015 ', 'Not bad', 4.5 , 003 ,3786737 ,35135984);
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101014 , '17/05/2015', 'The best', 10 , 004  , 4534744 ,7848501 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101015 , '09/12/2015', ' Bad', 4 , 005  , 9873499 ,2716848 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101016 , ' 08/01/2015', 'Amazing ', 9 ,  006 , 55544410 ,41414140 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101017, '07/09/2015 ', 'Worst ', 1.5 , 007  , 55544420 ,41414141 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101018 , ' 02/06/2015', 'Very good ',7.8  , 008  , 55544430 ,41414142 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101019 , ' 23/02/2015', 'Incredible ', 8.5 , 009  , 55544440 ,41414143 );
+INSERT INTO "Reviews"("ID", "Date", "Description", "Score", "Code_product", "Code_customer", "NIF")
+    VALUES (10101010 , ' 29/10/2015', 'Not bad ', 4.5 , 010  , 55544450 ,41414145 );
+
+--Services
+
+INSERT INTO "Services"("Code", "Name", "Description", "Additional_cost_with_VAT")	VALUES (1235, 'Maintenance', 'its right all', 100);
+INSERT INTO "Services"("Code", "Name", "Description", "Additional_cost_with_VAT")	VALUES (1236, 'Transport', 'Bring products', 200);
+INSERT INTO "Services"("Code", "Name", "Description", "Additional_cost_with_VAT")	VALUES (1237, 'Customer care', '24h', 50);
+INSERT INTO "Services"("Code", "Name", "Description", "Additional_cost_with_VAT")	VALUES (1238, 'Online', 'Web services', 75);
+INSERT INTO "Services"("Code", "Name", "Description", "Additional_cost_with_VAT")   	VALUES (1239, 'Marketing', 'Product promotion', 150);
+
+--Customer
+
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (12345678 , 'Juan', 'Calle Lozoya', 'credit_tarjet' ,699123456 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (98732141 , 'Maria', 'Avenida Viento', 'cash' ,699152535 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (02785412 , 'Cristian', 'Calle Peru', 'cash' ,646852012 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (08336559 , 'Carla', 'Avenida FelipeVI', 'credit_tarjet' ,619550017 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (14785236 , 'Carlos', 'Paseo Fuerteventura', 'cash' ,656664785 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (02025874 , 'Pedro', 'Callle Rioja', 'credit_tarjet' ,627675341 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (07848501 , 'Santiago', 'Avenida cantabria','credit_tarjet' ,656664785 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (35135984 , 'Javier', 'Calle Madrid', 'credit_tarjet' ,612798456 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (02255748 , 'Marta', 'Paseo metropolitana', 'credit_tarjet' ,63379896 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (02716848 , 'Susana', 'Calle Mayor', 'credit_tarjet',676841147 );
+EXTRAS PARA ONLINE
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (41414140 , 'Ana', 'Calle derecha', 'credit_tarjet',667867677 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (41414141 , 'Juan, 'Calle izquierda', 'credit_tarjet',696784347 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (41414142 , 'Elena', 'Calle primera', 'credit_tarjet',63425677 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (41414143 , 'Sofia', 'Calle segunda', 'credit_tarjet',63411257 );
+INSERT INTO "Customer"("NIF", "Name_customer", "Address", "Method_pay", "Phone_number")    VALUES (41414145 , 'Antonio', 'Calle tercera', 'credit_tarjet',67789947 );
+
+--Customer_phisical
+
+INSERT INTO "Customer_physical"("Postal_code", "NIF")    VALUES (28823, 12345678);
+INSERT INTO "Customer_physical"("Postal_code", "NIF")    VALUES (28457, 98732141);
+INSERT INTO "Customer_physical"("Postal_code", "NIF")    VALUES (28702, 02785412);
+INSERT INTO "Customer_physical"("Postal_code", "NIF")    VALUES (28280, 08336559);
+INSERT INTO "Customer_physical"("Postal_code", "NIF")    VALUES (28820, 14785236);
+
+--Associated
+
+INSERT INTO "Associated" VALUES (001,1235);
+INSERT INTO "Associated" VALUES (002,1236);
+INSERT INTO "Associated" VALUES (003,1237);
+INSERT INTO "Associated" VALUES (004,1238);
+INSERT INTO "Associated" VALUES (005,1239);
+INSERT INTO "Associated" VALUES (006,12310);
+INSERT INTO "Associated" VALUES (007,12311);
+INSERT INTO "Associated" VALUES (008,12312);
+INSERT INTO "Associated" VALUES (009,12313);
+INSERT INTO "Associated" VALUES (010,12314);
+
+--Have
+
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (001, 10);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (002, 11);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (003, 12);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (004, 13);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (005, 14);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (006, 15);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (007, 16);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (008, 17);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (009, 18);
+INSERT INTO "Have"("Code_product", "ID_offer")    VALUES (010, 19);
+
+--is_offered
+
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (001,100001);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (002, 100002);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (003, 100003);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (004, 100004);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (005, 100005);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (006, 100006);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (007, 100007);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (008, 100008);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (009, 100009);
+INSERT INTO "is_offered"("Code_product", "ID")
+    VALUES (010, 100010);
+
+--Customer_online
+
+INSERT INTO "Customer_online"("Code_customer", "Users", "Email", "Password", "NIF")
+    VALUES (3453445, 'Peter', 'peter@gmail.com', 'jamon',02025874);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (4534744, 'Santy', 'Santy@hotmail.com', 'calvocalvo',07848501);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (3786737, 'Javier', 'Javi@hotmail.com', 'cochazo',35135984);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (3783463, 'Marta', 'Martita@gmail.com', 'pepinillo',02255748);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (9873499 ,'Susana', 'susanas@gmail.com', 'susi',02716848);
+EXTRAS
+
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (55544410 ,'Ana', 'Ana@gmail.com', 'ann',41414140);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (55544420 ,'Juan', 'Juan@gmail.com', 'jon',41414141);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (55544430 ,'Elena', 'Elena@gmail.com', 'elen',41414142);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (55544440 ,'Sofia', 'Sofia@gmail.com', 'sofi',41414143);
+INSERT INTO "Customer_online"("Code_customer", "Users", "Password", "Email","NIF")
+    VALUES (55544450 ,'Antonio', 'Antonio@gmail.com', 'toni',41414145);
+
+
+--Shopping
+
+INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (10, '01/01/2015', 4132, 5000, 
+            2025874, 1235, 10, 100001, 1);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (20, '02/02/2015', 2892, 3500, 
+            2255748, 1236, 11, 100002, 2);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (30, '03/03/2015', 826, 1000, 
+            2716848, 1237, 12, 100003, 3);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (40, '04/04/2015', 2272, 2750, 
+            2785412, 1238, 13, 100004, 4);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (50, '05/05/2015', 413, 500, 
+            7848501, 1239, 14, 100005, 5);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (60, '06/06/2015', 1446, 1750, 
+            8336559, 12310, 15, 100006, 6);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (70, '07/07/2015', 2685, 3250, 
+            12345678, 12311, 16, 100007, 7);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (80, '08/08/2015', 4132, 5000, 
+            14785236, 12312, 17, 100008, 8);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (90, '09/09/2015', 6033, 7300, 
+            35135984, 12313, 18, 100009, 9);
+            INSERT INTO "Shopping"(
+            "Shopping_number", "Date", "Amount_without_VAT", "Amount_with_VAT", 
+            "NIF", "Code", "ID_offer", "ID", "Code_product")
+    VALUES (100, '10/10/2015', 52, 63, 
+            98732141, 12314, 19, 100010, 10);
+
+--Bill
+
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1000,10);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1100,20);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1200,30);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1300,40);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1400,50);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1500,60);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1600,70);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1700,80);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1800,90);
+INSERT INTO "Bill"("Number_bill","Shopping_number") VALUES (1900,100);
+
+--Refund
+
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (001, 10, '30/12/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (002, 20, '25/11/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (003, 30, '20/10/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (004, 40, '15/9/2015', false);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (005, 50, '10/8/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (006, 60, '5/7/2015', false);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (007, 70, '1/6/2015',false );
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (008, 80, '2/5/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (009, 90, '3/4/2015', true);
+INSERT INTO "Refund"("CodeP", "Shopping_number", "Date_return", "imperfection")	VALUES (010, 100, '4/3/2015', false);
+

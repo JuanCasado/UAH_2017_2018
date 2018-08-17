@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/NodoArbol.cpp.o ./Debug/Arbol.cpp.o ./Debug/Gestor.cpp.o ./Debug/Trunck.cpp.o

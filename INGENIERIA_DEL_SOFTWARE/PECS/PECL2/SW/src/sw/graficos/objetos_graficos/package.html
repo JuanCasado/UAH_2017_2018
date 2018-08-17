@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>package</title>
+  <meta content="Chuidiang" name="author">
+</head>
+<body>
+<p>Paquete con los objetos gr&aacute;ficos que se
+pueden dibujar en un Lienzo.</p>
+<p>En este paquete est&aacute; la interface
+ObjetoGrafico. Esta interface obliga a definir un m&eacute;todo
+dibujate(). Los objetos gr&aacute;ficos que implementan esta interface
+debe saber dibujar algo en su m&eacute;todo dibujate(), usando la
+InterfaceEscalaGrafica que reciben en dicho m&eacute;todo.</p>
+<p>Una vez construido el objeto gr&aacute;fico, se
+puede a&ntilde;adir al Lienzo. Este se encargar&aacute; de llamar al
+m&eacute;todo dibujate() cuando sea necesario: redimensionados de
+ventana, cambios de escala, etc, etc.</p>
+<p>El Linezo se suscribe a necesidades de repintado de
+los objetos gr&aacute;ficos que recibe. De esta forma, cuando un objeto
+gr&aacute;fico cambie sus datos internos y necesite ser repintado, debe
+avisar a sus suscriptores de repintado.</p>
+<p>En este paquete hay varios objetos gr&aacute;ficos
+ya creados, aunque el usuario de la librer&iacute;a puede realizar los
+que crea oportunos.</p>
+<p>Por un lado hay un AbstractObjetoGrafico, que ya
+implementa todo el tema de la suscripci&oacute;n a necesidad de
+repintado y &uacute;nicamente deja sin definir el m&eacute;todo
+dibujate(). Casi todos los objetos gr&aacute;ficos heredar&aacute;n de
+este.</p>
+<p>Por otro lado, hay otros objetos gr&aacute;ficos ya
+completos:</p>
+<p>
+<ul>
+  <li>Mano. Permite mover cualquier gr&aacute;fico arrastrando con el
+bot&oacute;n derecho del rat&oacute;n</li>
+  <li>FuncionAbstracta. Clase abstracta que permite dibujar una
+funci&oacute;n matem&aacute;tica. Debe redefinir el m&eacute;todo que
+devuelve y en funci&oacute;n de x</li>
+  <li>Rejilla, RejillaFija, RejillaFija2, RejillaPolar, que dibujan una
+rejilla sobre el gr&aacute;fico</li>
+  <li>GraficoFuncionPorPuntos. Se le da un array de puntos y entre dos
+valores de x y dibuja la funci&oacute;n uniendo dichos puntos y
+suponi&eacute;ndolos equiespaciados en el eje x.</li>
+  <li>GraficoPuntos, que dibuja varios puntos x,y</li>
+  <li>etc, etc</li>
+</ul>
+</p>
+<br>
+</body>
+</html>

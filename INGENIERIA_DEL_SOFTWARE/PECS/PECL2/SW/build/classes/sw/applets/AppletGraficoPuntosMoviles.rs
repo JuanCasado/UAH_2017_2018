@@ -1,0 +1,2 @@
+com.chuidiang.graficos.ejemplos.applets.AppletGraficoPuntosMoviles$1
+com.chuidiang.graficos.ejemplos.applets.AppletGraficoPuntosMoviles

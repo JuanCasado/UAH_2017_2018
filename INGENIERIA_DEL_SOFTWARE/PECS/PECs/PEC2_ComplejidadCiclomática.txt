@@ -1,0 +1,14 @@
+La compl. ciclomatica CCN para el ejercicio (aunque el grafo puede ser distinto según lo hagan):
+
+Nr. NCSS CCN JVDC Function
+  1   10   5    0 algorithms.bubbleSort1([])
+  2    9   4    0 algorithms.bubbleSort2(int[])
+  3    7   4    0 algorithms.selectionSort1(t[])
+  4   10   4    0 algorithms.maxi(int,int,int)
+  5    9   6    0 algorithms.gcd(int,int)
+  6    8   1    1 algorithms.main(String[])
+  7    3   1    0 Cola.Nodo.Nodo(int)
+  8    2   1    0 Cola.Cola()
+  9    7   2    0 Cola.push(int)
+ 10    8   3    0 Cola.pop()
+ 11    9   3    0 Cola.mostrar()

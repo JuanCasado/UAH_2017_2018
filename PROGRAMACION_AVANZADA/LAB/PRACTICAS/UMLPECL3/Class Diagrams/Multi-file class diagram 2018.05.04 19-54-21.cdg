@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="VFuelStation" package="pecl3.screens" visibility="public" xPosition="971.0" yPosition="962.0">
+      <Fields>
+        <Field name="general" type="boolean" visibility="package"/>
+        <Field name="fuelStation" type="FuelStation" visibility="package"/>
+        <Field name="pump" type="VPump[]" visibility="package"/>
+        <Field name="car" type="VCarBuffer" visibility="package"/>
+        <Field name="worker" type="VWorkerBuffer" visibility="package"/>
+        <Field name="icon" type="VICON" visibility="package"/>
+        <Field name="barrier" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ip" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="timeSlider" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="timeTxt" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txt" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="workers"/>
+          <Argument type="int" name="cars"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carArrivesFuelStation" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carLeavesFuelStationQueue" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carReachesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerStartFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerEndsFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="carLeavesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="endSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="write" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="barrierMouseClicked" returnType="//GEN-FIRST:event_barrierMouseClicked void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowOpened" returnType="//GEN-FIRST:event_formWindowOpened void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowClosing" returnType="//GEN-FIRST:event_formWindowClosing void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="timeSliderStateChanged" returnType="//GEN-FIRST:event_timeSliderStateChanged void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="barrera" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="setData" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String[]" name="data"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VFuelStationClient" package="pecl3.screens" visibility="public" xPosition="971.0" yPosition="20.0">
+      <Fields>
+        <Field name="general" type="boolean" visibility="package"/>
+        <Field name="pump" type="VPump[]" visibility="package"/>
+        <Field name="car" type="VCarBuffer" visibility="package"/>
+        <Field name="worker" type="VWorkerBuffer" visibility="package"/>
+        <Field name="icon" type="VICON" visibility="package"/>
+        <Field name="conection" type="ClientConection" visibility="private" isFinal="true"/>
+        <Field name="barrier" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="id" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txt" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ClientConection" name="conection"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carArrivesFuelStation" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carLeavesFuelStationQueue" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carReachesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerStartFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerEndsFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="carLeavesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="endSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="write" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="barrierMouseClicked" returnType="//GEN-FIRST:event_barrierMouseClicked void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowClosing" returnType="//GEN-FIRST:event_formWindowClosing void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="barrera" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="setData" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String[]" name="data"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SFuelStation" package="pecl3.screens" visibility="public" xPosition="-6.0" yPosition="72.0">
+      <Fields>
+        <Field name="fuelStation" type="FuelStation" visibility="private" isFinal="true"/>
+        <Field name="worker" type="JTextField[]" visibility="private" isFinal="true"/>
+        <Field name="car" type="JTextField[]" visibility="private" isFinal="true"/>
+        <Field name="buffer" type="ArrayList&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="wbuffer" type="ArrayList&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="barier" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="buff" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car0" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="ip" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="timeSlider" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="timeTxt" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txt" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="worker0" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="workerTxt" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="workers"/>
+          <Argument type="int" name="cars"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carArrivesFuelStation" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carLeavesFuelStationQueue" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carReachesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerStartFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerEndsFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="carLeavesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="endSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="write" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formWindowClosing" returnType="//GEN-FIRST:event_formWindowClosing void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="timeSliderStateChanged" returnType="//GEN-FIRST:event_timeSliderStateChanged void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="barierActionPerformed" returnType="//GEN-FIRST:event_barierActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="formWindowOpened" returnType="//GEN-FIRST:event_formWindowOpened void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="barrera" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="setData" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String[]" name="data"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SFuelStationClient" package="pecl3.screens" visibility="public" xPosition="1799.0" yPosition="106.0">
+      <Fields>
+        <Field name="worker" type="JTextField[]" visibility="private" isFinal="true"/>
+        <Field name="car" type="JTextField[]" visibility="private" isFinal="true"/>
+        <Field name="buffer" type="ArrayList&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="wbuffer" type="ArrayList&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="conection" type="ClientConection" visibility="private" isFinal="true"/>
+        <Field name="barier" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="buff" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car0" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="car7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="id" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txt" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="worker0" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker6" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="worker7" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="workerTxt" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ClientConection" name="conection"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carArrivesFuelStation" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carLeavesFuelStationQueue" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carReachesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerStartFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerEndsFueling" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="carLeavesPump" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="endSimulation" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="write" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formWindowClosing" returnType="//GEN-FIRST:event_formWindowClosing void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="barierActionPerformed" returnType="//GEN-FIRST:event_barierActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="barrera" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="setData" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="String[]" name="data"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="FuelStationInterface" package="pecl3.screens" visibility="public" xPosition="1137.0" yPosition="626.0">
+      <Methods>
+        <Method name="carArrivesFuelStation" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carLeavesFuelStationQueue" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="carReachesPump" returnType="void" visibility="public">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerStartFueling" returnType="void" visibility="public">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="workerEndsFueling" returnType="void" visibility="public">
+          <Argument type="int" name="workerNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="carLeavesPump" returnType="void" visibility="public">
+          <Argument type="int" name="carNumber"/>
+          <Argument type="int" name="pumpNumber"/>
+        </Method>
+        <Method name="endSimulation" returnType="void" visibility="public"/>
+        <Method name="write" returnType="void" visibility="public">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="barrera" returnType="void" visibility="public">
+          <Argument type="boolean" name="state"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="setData" returnType="void" visibility="public">
+          <Argument type="String[]" name="data"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pecl3.screens.SFuelStationClient" target="pecl3.screens.FuelStationInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pecl3.screens.VFuelStationClient" target="pecl3.screens.FuelStationInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pecl3.screens.SFuelStation" target="pecl3.screens.FuelStationInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="pecl3.screens.VFuelStation" target="pecl3.screens.FuelStationInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

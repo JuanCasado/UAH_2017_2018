@@ -1,0 +1,46 @@
+FUNCIONES
+400540 printf()
+4006ac main()
+400872 factorial()
+400915 &*p (antes de asignar)
+400a83 mem_dinamica()
+400a83 cadenas()
+
+DATOS RESIDUALES
+401016 &*c (antes de asignar)
+
+VARIABLES GLOBALES
+602058 global a
+60205c global c
+602064 global D
+602068 global d
+60206c global b
+602070 global K
+
+MEMORIA ASIGNADA
+c50420 p (malloc)  (int)      p+1=c50424
+c50450 q (malloc)  (char)   q+1=c50451
+c50480 r (malloc)
+c504a0 s (malloc)
+
+DATOS RESIDUALES
+300000000 &*r (antes de asignar)
+600000000 &*s (antes de asignar)
+
+VARIABLES LOCALES
+7fff2163af7c parametro n1
+7fff2163af84 parametro f1
+7fff2163afac parametro n2
+7fff2163afb4 parametro f2
+7fff2163afc8 local *p <== (antes)
+7fff2163afc8 local *c <==
+7fff2163afd0 local *q <== (antes)
+7fff2163afd0 local b   <==
+7fff2163afd8 local *r
+7fff2163afdc parametro n3
+7fff2163afe0 local *s <== (antes)
+7fff2163afe0 local a   <==
+7fff2163afe0 c (apunta a a)
+7fff2163afe4 parametro f3
+7fff2163b010 local x
+7fff2163b014 local y

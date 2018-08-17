@@ -1,0 +1,29 @@
+[{
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/main.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/main.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/main.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cliente.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cliente.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cliente.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cola.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cola.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Cola.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Gestor.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Gestor.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Gestor.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Lista.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Lista.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Lista.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Nodo.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Nodo.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/Nodo.cpp.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/NodoLista.cpp",
+  "directory": "/Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1",
+  "command": "/usr/bin/g++ -c /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/NodoLista.cpp -o /Users/mr.blissfulgrin/Documents/UAH_2017:2018/DATOS/PEC1/PEC1/NodoLista.cpp.o  -g  -O0  -Wall -I. -I."
+ }]

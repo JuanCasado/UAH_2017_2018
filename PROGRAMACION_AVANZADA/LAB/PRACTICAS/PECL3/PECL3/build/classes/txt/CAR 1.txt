@@ -1,0 +1,13 @@
+--------------------------------------------------------------
+ - 145616 -Ha llegado a la gasolinera
+ - 145616 -Entra al parking
+ - 145616 -Hay un surtidor libre
+ - 145616 -Surtidor libre adquirido
+ - 145616 -Espera en el Pump 1
+ - 146826 -INTERRUPTION WHILE WAITING FOR A WORKER
+ - 146826 -CAR PAUSED
+ - 152213 -CAR RESUMED
+ - 152214 -INTERRUPTION WHILE WAITING FOR A WORKER
+ - 152214 -CAR FORCED END
+ - 152214 -Abandona la gasolinera
+--------------------------------------------------------------

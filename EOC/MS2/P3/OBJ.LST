@@ -1,0 +1,90 @@
+Microsoft (R) Macro Assembler Version 5.10                  10/16/17 13:33:0
+                                                             Page     1-1
+
+
+				liASSUME CS:codigo, DS:datos, SS:pila
+EJ1.asm(1): error A2105: Expected: instruction, directive, or label
+				
+ 0000				datos	SEGMENT
+ 0000  00				A DB 00h
+				
+ 0001				datos	ENDS
+				
+ 0000				pila	SEGMENT STACK
+ 0000  0100[				DB 256 DUP(?)
+	   ??			
+			 ]	
+				
+ 0100				pila	ENDS
+				
+ 0000				codigo	SEGMENT
+ 0000					main	PROC FAR
+ 0000  1E					PUSH DS
+ 0001  33 C0					XOR AX,AX
+ 0003  50					PUSH AX
+ 0004  B8 ---- R				MOV AX,DATOS
+ 0007  8E D8					MOV DS,AX
+				
+ 0009						etiqueta:	;REINICIO
+EJ1.asm(20): error A2062: Missing or unreachable CS
+ 0009  33 C0					xor ax,ax
+ 000B  33 D2					xor dx,dx
+				
+ 000D  B4 0C					mov ah,0Ch	;A
+ 000F  B0 08					mov al,08h
+ 0011  CD 21					int 21h
+ 0013  3C 30					cmp al,30h
+ 0015  7C F2					jl etiqueta
+ 0017  3C 39					cmp al,39h
+ 0019  7F EE					jg etiqueta
+ 001B  A2 0000 R				mov A,al
+EJ1.asm(31): error A2068: Cannot address with segment register
+						
+				
+				
+ 001E  B4 02					mov ah,02h
+ 0020  8A 16 0000 R				mov dl,A
+EJ1.asm(36): error A2068: Cannot address with segment register
+ 0024  CD 15					int 21	
+					
+				
+ 0026  CB					RET
+ 0027					main 	ENDP
+ 0027				codigo	ENDS
+				
+				END	main
+Microsoft (R) Macro Assembler Version 5.10                  10/16/17 13:33:0
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODIGO . . . . . . . . . . . . .  	0027	PARA	NONE	
+DATOS  . . . . . . . . . . . . .  	0001	PARA	NONE	
+PILA . . . . . . . . . . . . . .  	0100	PARA	STACK	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+A  . . . . . . . . . . . . . . .  	L BYTE	0000	DATOS
+
+ETIQUETA . . . . . . . . . . . .  	L NEAR	0009	CODIGO
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	CODIGO	Length = 0027
+
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@FILENAME  . . . . . . . . . . .  	TEXT  EJ1		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     44 Source  Lines
+     44 Total   Lines
+     11 Symbols
+
+  47194 + 440706 Bytes symbol space free
+
+      0 Warning Errors
+      4 Severe  Errors

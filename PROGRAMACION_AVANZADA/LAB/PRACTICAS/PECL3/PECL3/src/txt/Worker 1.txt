@@ -1,0 +1,11 @@
+--------------------------------------------------------------
+ - 142325 -Esperando por un coche
+ - 145616 -Hay coches para servir
+ - 145616 -Comienza a servir en Pump 1 a CAR 1
+ - 146826 -WORKER INTERRUPTED
+ - 146826 -WORKER PAUSED
+ - 152213 -WORKER RESUMED
+ - 153777 -WORKER INTERRUPTED
+ - 153777 -WORKER FORCED TERMINATION
+ - 153777 -Ha terminado
+--------------------------------------------------------------

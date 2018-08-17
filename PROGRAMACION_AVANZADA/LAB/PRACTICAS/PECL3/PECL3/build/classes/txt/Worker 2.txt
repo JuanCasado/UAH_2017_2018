@@ -1,0 +1,8 @@
+--------------------------------------------------------------
+ - 142326 -Esperando por un coche
+ - 146826 -INTERRUPTION WHILE WAITING FOR FREE PUM
+ - 146826 -WORKER PAUSED
+ - 152213 -CARED_PUMP WAS EMPTY
+ - 153777 -INTERRUPTED WHILE WAITING FOR EXECUTOR TO END
+ - 153777 -Ha terminado
+--------------------------------------------------------------

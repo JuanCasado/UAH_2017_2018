@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/Cliente.cpp.o ./Debug/Cola.cpp.o ./Debug/Gestor.cpp.o ./Debug/Lista.cpp.o ./Debug/NodoLista.cpp.o ./Debug/NodoCola.cpp.o   
