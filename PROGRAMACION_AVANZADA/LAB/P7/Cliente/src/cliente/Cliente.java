@@ -35,27 +35,31 @@ public class Cliente
         
         try
         {
-            //IP = new byte [] {(byte)(172),(byte)(22),(byte)(96),(byte)(201)};
-            IP = InetAddress.getLocalHost().getAddress();
+            IP = new byte [] {(byte)(192),(byte)(168),(byte)(1),(byte)(1)};
+            //IP = InetAddress.getLocalHost().getAddress();
             control = true;
             user = new Scanner (System.in);
             
             System.out.println(InetAddress.getLocalHost().getHostAddress());
             
-            client = new Socket(InetAddress.getByAddress(IP),6666);
+            client = new Socket(InetAddress.getByAddress(IP),80);
             input = new DataInputStream(client.getInputStream());
             output = new DataOutputStream(client.getOutputStream()); 
             
             while (control)
             {
+                /*
                 System.out.print("Input message = ");
                 mensaje = user.nextLine();
                 output.writeUTF(mensaje);
+                System.out.print("sent... ");
                 mensaje = input.readUTF();
                 if (mensaje.equals("F"))
                     control = false;
                 else
-                    System.out.println(mensaje);
+                    System.out.println("Recived: "+mensaje);
+                */
+                System.out.println(input.readUTF());
             }
             input.close();
             output.close();

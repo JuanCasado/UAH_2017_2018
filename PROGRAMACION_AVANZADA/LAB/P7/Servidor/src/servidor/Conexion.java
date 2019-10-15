@@ -9,6 +9,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,8 +28,7 @@ public class Conexion extends Thread
     private final Server server;
     private AtomicBoolean control;
     
-    public Conexion (Socket conexion, int x,Server server) throws IOException
-    {
+    public Conexion (Socket conexion, int x,Server server) throws IOException {
         input = new DataInputStream(conexion.getInputStream());
         output = new DataOutputStream(conexion.getOutputStream()); 
         this.id = x;
@@ -38,88 +38,40 @@ public class Conexion extends Thread
     }
     
     @Override
-    public void run ()
-    {
-        try 
-        {
+    public void run () {
+        try {
+            Scanner keyboard = new Scanner(System.in);
             System.out.println("START "+id);
-            while (control.get())
-            {
+            while (control.get()) {
                 mensaje = input.readUTF();
-                switch (mensaje)
-                {
-                    case "0":
-                        output.writeUTF("F");
-                        control.set(false);
-                        break;
-                    case "X":
-                        output.writeUTF("F");
-                        control.set(false);
-                        server.parar();
-                        break;
-                    default:
-                        try
-                        {
-                            String [] operation = mensaje.split(" ");
-                            if (operation.length == 2)
-                            {
-                                int loops = Integer.parseInt(operation[0]);
-                                if (loops < 100)
-                                {
-                                    for (int x = 0; x < loops; x++)
-                                    {
-                                        System.out.println(id+"  "+operation[1]);
-                                    }
-                                    output.writeUTF("OK " + id);
-                                }
-                                else
-                                {
-                                    output.writeUTF("TOO MUCH " + id);
-                                }
-                            }
-                            else
-                            {
-                                output.writeUTF("WRONG " + id);
-                            }
-                        }
-                        catch (NumberFormatException e)
-                        {
-                            output.writeUTF("WRONG " + id);
-                        }
-                        break;
-            }   
+                System.out.println(mensaje);
+                System.out.print(">");
+                output.writeUTF(keyboard.nextLine());
+                System.out.println("SENT");
+            }
+            input.close();
+            output.close();
+            conexion.close();
+            System.out.println("END CORRECTLY " + id);
         }
-        input.close();
-        output.close();
-        conexion.close();
-        System.out.println("END CORRECTLY " + id);
-        }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             System.out.println("ERROR IN " + id);
         }
-        finally 
-        {
+        finally {
             server.eliminar(id);
         }
     }
     
-    public void setID(int id)
-    {
+    public void setID(int id) {
         this.id = id;
     }
     
-    public void parar ()
-    {
+    public void parar () {
         control.set(false);
-        try
-        {
+        try {
             input.close();
             output.close();
             conexion.close();
-        } catch (IOException ex)
-        {
-        }
-        
+        } catch (IOException ex) { }
     }
 }

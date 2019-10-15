@@ -36,7 +36,7 @@ public class Server extends Thread
     {
         try
         {
-            server = new ServerSocket(6666);
+            server = new ServerSocket(5008);
             while (control)
             { 
                 System.out.println("WAITING...");
@@ -66,8 +66,7 @@ public class Server extends Thread
         try
         {
             server.close();
-            conexiones.forEach((c) ->
-            {
+            conexiones.forEach((c) -> {
                 c.parar();
             });
         } 
